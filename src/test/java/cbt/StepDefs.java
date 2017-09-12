@@ -1,5 +1,7 @@
 package cbt;
 
+import static org.junit.Assert.fail;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -32,6 +34,13 @@ public class StepDefs {
 	public void i_should_be_see_the_results() throws Throwable {
 		Assert.assertTrue(driver.getCurrentUrl().contains("search"));
 		driver.quit();
+	}
+	
+	@Then("^I should be see the list$")
+	public void i_should_be_see_the_resultss() throws Throwable {
+		Assert.assertTrue(driver.getCurrentUrl().contains("search"));
+		driver.quit();
+		fail();
 	}
 
 }

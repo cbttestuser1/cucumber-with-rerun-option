@@ -40,6 +40,7 @@
 					<testFailureIgnore>true</testFailureIgnore>
 					<includes>
 						<include>**/*CukesRunner.java</include>
+						<include>**/*FailedScenarios.java</include>
 					</includes>
 				</configuration>
 			</plugin>
