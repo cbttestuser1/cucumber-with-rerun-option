@@ -12,14 +12,14 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class StepDefs {
 	WebDriver driver;
 
 	@Given("^I am on the home page$")
 	public void i_am_on_the_home_page() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", 
-				"./src/test/resources/drivers/chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("http://etsy.com");
 
